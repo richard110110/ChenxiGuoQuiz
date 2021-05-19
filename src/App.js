@@ -1,104 +1,40 @@
-import React, {useState, useEffect, useReducer} from 'react';
+import React, { Component } from 'react';
+import fire from './config/fire'
+import Login from './Login.js';
+import Home from './Home.js';
 
-import {useSelector, useDispatch} from 'react-redux';
+class App extends Component {
 
-import {Questionaire} from './components';
-
-import {previousQuestion, nextQuestion, currentQuestion, currentScore} from './store/features/counterSlice';
-
-
-
-
-const API_URL = `https://opentdb.com/api.php?amount=10&category=${Math.floor(Math.random()*32) + 9}&difficulty=medium&type=multiple`;
-
-
-
-function App() {
-
-    const {count} = useSelector((state) => state.counter);
-    const dispatch = useDispatch();
-
-    const [questions,
-        setQuestions] = useState([]);
-    
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    const [score, setScore] = useState(0);
-
-    const [gameEnded, setGameEnded] = useState(false);
-
-    const [showAnswers, setShowAnswers] = useState(false);
-
-    useEffect(() => {
-      dispatch(currentQuestion({question: questions[currentIndex]}));
-
-        fetch(API_URL).then((res) => res.json()).then((data) => {
-            setQuestions(data.results);
-
-         //   setCurrentIndex(data.results[0])
-        });
-    }, []);
-
-    const handleAnswer = (answer) => {
-
-      // const newIndex = currentIndex + 1;
-
-      // setCurrentIndex(newIndex);
-      if(!showAnswers){
-        if(answer === questions[currentIndex].correct_answer){
-          setScore(score+1);
-        }
-      }
-    
-
-      setShowAnswers(true);
-
-      // if(newIndex >= questions.length){
-      //   setGameEnded(true);
-      // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null,
     };
 
-    const handleNextQuestion = () => {
-      setShowAnswers(false);
-      dispatch(nextQuestion({question: questions[currentIndex + 1]}));
-      dispatch(currentScore({score}));
+    this.authListener = this.authListener.bind(this);
+  }
 
+  componentDidMount() {
+    this.authListener();
+  }
 
-      setCurrentIndex(currentIndex + 1);
-    }
-
-    const viewAnsweredQuestion = () => {
-      if(currentIndex > 0){
-        setShowAnswers(true);
-        dispatch(previousQuestion({question: questions[currentIndex - 1]}));
-
-        setCurrentIndex(currentIndex - 1);
-      } else{
-        alert("no previous question"); 
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
       }
-      
+    })
+  }
 
-    }
-
-    return questions.length > 0 ? (
-      <div className="container">
-        {currentIndex >= questions.length ? (
-          <h1 className="text-3xl text-white font-bold">
-            Quiz ended! Your score was {score}/10;
-          </h1>
-        ) : (
-          <Questionaire
-          data={questions[currentIndex]}
-          showAnswers={showAnswers}
-          handleNextQuestion={handleNextQuestion}
-          viewAnsweredQuestion={viewAnsweredQuestion}
-          handleAnswer={handleAnswer}
-          />
-        )}
+  render() {
+    return (
+      <div className="App">
+        { this.state.user ? ( <Home /> ) : ( <Login /> ) }
       </div>
-    ) : (
-      <h2 className='text-2xl text-white font-bold'>Loading/</h2>
     );
+  }
 }
 
 export default App;
