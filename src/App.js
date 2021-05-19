@@ -1,14 +1,6 @@
 import React, {useState, useEffect, useReducer} from 'react';
 
-import {
-  SET_ANSWERS,
-  SET_CURRENT_QUESTION,
-  SET_CURRENT_ANSWER,
-  SET_ERROR,
-  SET_SHOW_RESULTS,
-  RESET_QUIZ,
-} from './reducers/QuizReducer';
-import quizReducer from './reducers/QuizReducer';
+
 
 import {Questionaire} from './components';
 
