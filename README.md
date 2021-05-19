@@ -27,6 +27,12 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 Current Score track
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/trackAnsweredQuestion.png?raw=true)
 
+Answered Question track
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/trackAnsweredQuestion.png?raw=true)
+
+Next Question track
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/trackNextQuestion.png?raw=true)
+
 
 
 
