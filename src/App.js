@@ -34,6 +34,7 @@ function App() {
 
     useEffect(() => {
         fetch(API_URL).then((res) => res.json()).then((data) => {
+            console.log(data.results);
             setQuestions(data.results);
          //   setCurrentIndex(data.results[0])
         });
