@@ -22,6 +22,9 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 5. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
 6. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
 
+7. Done the React Redux toolkit to do the state and action management
+
+
 
 
 
