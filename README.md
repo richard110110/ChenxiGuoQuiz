@@ -1,5 +1,7 @@
 # This quiz app is for the assignment of Manezco, building a quiz app
 
+# deployed on https://festive-mirzakhani-0777d6.netlify.app/
+
 # opentdb API
 
 https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple'
