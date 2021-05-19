@@ -8,10 +8,10 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 2. Each question has four options that the user can choose from.
 3. The current question must be answered before the next question can be attempted. 
 4. Once all questions have been answered, the user is shown their results/score.
-5. Users can freely navigate to any questions that they have already answered.
+5. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
 6. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
 
- 
+
 
 
 # Getting Started with Create React App
