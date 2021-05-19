@@ -15,7 +15,7 @@ import {Questionaire} from './components';
 
 
 
-const API_URL = `https://opentdb.com/api.php?amount=${Math.floor(Math.random()*32) + 9}&category=10&difficulty=medium&type=multiple`;
+const API_URL = `https://opentdb.com/api.php?amount=10&category=${Math.floor(Math.random()*32) + 9}&difficulty=medium&type=multiple`;
 
 
 
