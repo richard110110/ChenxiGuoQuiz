@@ -24,6 +24,9 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 
 7. Done the React Redux toolkit to do the state and action management
 
+Current Score track
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/trackAnsweredQuestion.png?raw=true)
+
 
 
 
