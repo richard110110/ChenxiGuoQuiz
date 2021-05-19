@@ -18,16 +18,16 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/opentdCategory.png?raw=true)
 1. The user needs to register and login to interact with the quiz app by firebase.
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/Login&RegisterForm.png?raw=true)
 
 2. The user register successfully
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/SignUpSucceed.png?raw=true)
 
 3. The inspector load logged user information
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/firebaseLoadUserInfo.png?raw=true)
 
 4. The Firebase have the user information
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/FirebaseUser.png?raw=true)
 
 
 5. The quiz is made up of multiple questions, each presented one at a time.
