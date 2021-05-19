@@ -12,10 +12,16 @@ export const counterSlice = createSlice({
         },
         nextQuestion(state, action){
             state.count +=1;
+        },
+        currentQuestion(state, action){
+            state.count = state.count;
+        },
+        currentScore(state, action){
+            state.count = state.count;
         }
     }
 });
 
-export const {previousQuestion, nextQuestion} = counterSlice.actions;
+export const {previousQuestion, nextQuestion, currentQuestion, currentScore} = counterSlice.actions;
 
 export default counterSlice.reducer;

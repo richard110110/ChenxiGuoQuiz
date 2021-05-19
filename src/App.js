@@ -1,8 +1,10 @@
 import React, {useState, useEffect, useReducer} from 'react';
 
-
+import {useSelector, useDispatch} from 'react-redux';
 
 import {Questionaire} from './components';
+
+import {previousQuestion, nextQuestion, currentQuestion, currentScore} from './store/features/counterSlice';
 
 
 
@@ -12,6 +14,9 @@ const API_URL = `https://opentdb.com/api.php?amount=10&category=${Math.floor(Mat
 
 
 function App() {
+
+    const {count} = useSelector((state) => state.counter);
+    const dispatch = useDispatch();
 
     const [questions,
         setQuestions] = useState([]);
@@ -25,8 +30,11 @@ function App() {
     const [showAnswers, setShowAnswers] = useState(false);
 
     useEffect(() => {
+      dispatch(currentQuestion({question: questions[currentIndex]}));
+
         fetch(API_URL).then((res) => res.json()).then((data) => {
             setQuestions(data.results);
+
          //   setCurrentIndex(data.results[0])
         });
     }, []);
@@ -52,6 +60,9 @@ function App() {
 
     const handleNextQuestion = () => {
       setShowAnswers(false);
+      dispatch(nextQuestion({question: questions[currentIndex + 1]}));
+      dispatch(currentScore({score}));
+
 
       setCurrentIndex(currentIndex + 1);
     }
@@ -59,6 +70,7 @@ function App() {
     const viewAnsweredQuestion = () => {
       if(currentIndex > 0){
         setShowAnswers(true);
+        dispatch(previousQuestion({question: questions[currentIndex - 1]}));
 
         setCurrentIndex(currentIndex - 1);
       } else{
