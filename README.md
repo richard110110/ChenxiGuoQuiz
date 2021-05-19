@@ -1,15 +1,21 @@
 # This quiz app is for the assignment of Manezco, building a quiz app
 
 # deployed on https://festive-mirzakhani-0777d6.netlify.app/
+this app has been deployed on netlify platform.
+if you have any question, please contact to cguo3889@uni.sydney.edu.au
 
 # opentdb API
 
+a free API that can generate the quiz in JSON format, in each quiz, there are 4 four choices and only one is correct.
+
 https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple'
+
+# function
 
 1. The quiz is made up of multiple questions, each presented one at a time.
 2. Each question has four options that the user can choose from.
-3. The current question must be answered before the next question can be attempted. 
-4. Once all questions have been answered, the user is shown their results/score.
+3. The current question must be answered before the next question can be attempted (the next question button is not available until the current question is answered). 
+4. Once all questions have been answered, the user is shown their score.
 5. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
 6. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
 
