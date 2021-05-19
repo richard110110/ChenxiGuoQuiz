@@ -19,15 +19,16 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 
 
 2. Each question has four options that the user can choose from.
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/initial.png?raw=true)
 
 3. The current question must be answered before the next question can be attempted (the next question button is not available until the current question is answered). 
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/nextQuestion.png?raw=true)
 
 4. Once all questions have been answered, the user is shown their score.
-![]()
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/score.png?raw=true)
 
 5. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
+![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/answeredQuestion.png?raw=true)
 6. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/APIJSON.png?raw=true)
 
