@@ -14,26 +14,41 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 
 - when the app loading, i list 10 mutiple choice from different category (list in https://opentdb.com/api_config.php) randomly;
 
+
+
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/opentdCategory.png?raw=true)
-1. The quiz is made up of multiple questions, each presented one at a time.
+1. The user needs to register and login to interact with the quiz app by firebase.
+![]()
+
+2. The user register successfully
+![]()
+
+3. The inspector load logged user information
+![]()
+
+4. The Firebase have the user information
+![]()
 
 
-2. Each question has four options that the user can choose from.
+5. The quiz is made up of multiple questions, each presented one at a time.
+
+
+6. Each question has four options that the user can choose from.
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/initial.png?raw=true)
 
-3. The current question must be answered before the next question can be attempted (the next question button is not available until the current question is answered). 
+7. The current question must be answered before the next question can be attempted (the next question button is not available until the current question is answered). 
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/nextQuestion.png?raw=true)
 
-4. Once all questions have been answered, the user is shown their score.
+8. Once all questions have been answered, the user is shown their score.
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/score.png?raw=true)
 
-5. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
+9. Users can freely navigate to any questions that they have already answered. (by clicking the previous button)
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/answeredQuestion.png?raw=true)
-6. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
+10. Use an API to fetch the quiz data and results. (https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple')
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/APIJSON.png?raw=true)
 
 
-7. Done the React Redux toolkit to do the state and action management
+11. Done the React Redux toolkit to do the state and action management
 
 Current Score track
 ![](https://github.com/richard110110/ChenxiGuoQuiz/blob/main/resource/trackAnsweredQuestion.png?raw=true)
