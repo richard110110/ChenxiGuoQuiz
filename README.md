@@ -14,7 +14,7 @@ https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multipl
 
 - when the app loading, i list 10 mutiple choice from different category (list in https://opentdb.com/api_config.php) randomly;
 
-
+![]()
 1. The quiz is made up of multiple questions, each presented one at a time.
 
 
